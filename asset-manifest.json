@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/tyche/static/css/main.df8df4a5.chunk.css",
+    "main.css": "/tyche/static/css/main.7d7be2a0.chunk.css",
     "main.js": "/tyche/static/js/main.01736f02.chunk.js",
     "main.js.map": "/tyche/static/js/main.01736f02.chunk.js.map",
     "runtime-main.js": "/tyche/static/js/runtime-main.730adc8f.js",
@@ -8,13 +8,13 @@
     "static/js/2.3990d078.chunk.js": "/tyche/static/js/2.3990d078.chunk.js",
     "static/js/2.3990d078.chunk.js.map": "/tyche/static/js/2.3990d078.chunk.js.map",
     "index.html": "/tyche/index.html",
-    "static/css/main.df8df4a5.chunk.css.map": "/tyche/static/css/main.df8df4a5.chunk.css.map",
+    "static/css/main.7d7be2a0.chunk.css.map": "/tyche/static/css/main.7d7be2a0.chunk.css.map",
     "static/js/2.3990d078.chunk.js.LICENSE.txt": "/tyche/static/js/2.3990d078.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.730adc8f.js",
     "static/js/2.3990d078.chunk.js",
-    "static/css/main.df8df4a5.chunk.css",
+    "static/css/main.7d7be2a0.chunk.css",
     "static/js/main.01736f02.chunk.js"
   ]
 }
