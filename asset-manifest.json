@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/tyche/static/css/main.8c8b27cf.chunk.css",
+    "main.js": "/tyche/static/js/main.a7540709.chunk.js",
+    "main.js.map": "/tyche/static/js/main.a7540709.chunk.js.map",
+    "runtime-main.js": "/tyche/static/js/runtime-main.79e9ca55.js",
+    "runtime-main.js.map": "/tyche/static/js/runtime-main.79e9ca55.js.map",
+    "static/js/2.260da3fc.chunk.js": "/tyche/static/js/2.260da3fc.chunk.js",
+    "static/js/2.260da3fc.chunk.js.map": "/tyche/static/js/2.260da3fc.chunk.js.map",
+    "static/js/3.a6b42725.chunk.js": "/tyche/static/js/3.a6b42725.chunk.js",
+    "static/js/3.a6b42725.chunk.js.map": "/tyche/static/js/3.a6b42725.chunk.js.map",
+    "index.html": "/tyche/index.html",
+    "static/css/main.8c8b27cf.chunk.css.map": "/tyche/static/css/main.8c8b27cf.chunk.css.map",
+    "static/js/2.260da3fc.chunk.js.LICENSE.txt": "/tyche/static/js/2.260da3fc.chunk.js.LICENSE.txt",
+    "static/media/logo.6ce24c58.svg": "/tyche/static/media/logo.6ce24c58.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.79e9ca55.js",
+    "static/js/2.260da3fc.chunk.js",
+    "static/css/main.8c8b27cf.chunk.css",
+    "static/js/main.a7540709.chunk.js"
+  ]
+}
