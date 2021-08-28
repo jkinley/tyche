@@ -1,6 +1,51 @@
 body {
   margin: 0;
-  background-color: #222222;
+  background-color: #333;
   color: #ccc;
   font-family: 'Helvetica', sans-serif;
+
+  #root {
+    height: 100%;
+  }
+
+  .App {
+    height: 100vh;
+    overflow: hidden;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto 1fr auto;
+    
+    .header {
+      background-color: #222;
+      padding: 1rem;
+      .container {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+      }
+    }
+
+    .nav {
+      padding: 1rem;
+    }
+
+    .main {
+      padding: 1rem;
+      overflow-y: auto;
+    }
+    .footer {
+      display: flex;
+      justify-content: center;
+      background-color: #222;
+      color: #666;
+      padding: 1rem;
+    }
+  }
+}
+
+.container {
+  width: 100%;
+  max-width: 1024px;
+  margin: 0 auto;
+  padding: 0 5%;
 }
