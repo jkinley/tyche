@@ -1,12 +1,14 @@
 .navbar {
   .btn {
     border: none;
+    padding: 0.25rem 0.5rem;
     background-color: transparent;
     color: slategray;
-    font-size: 1.2rem;
+    font-size: 1rem;
     cursor: pointer;
     &:hover {
       color: #ccc;
     }
+
   }
 }
