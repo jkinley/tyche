@@ -43,7 +43,7 @@ const Planets = () => {
         </div>
       )}
 
-      {isFetching ? <span> Fetching data...</span> : null}{' '}
+      {/* {isFetching ? <span> Fetching data...</span> : null}{' '} */}
     </>
   );
 }
