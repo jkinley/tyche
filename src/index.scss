@@ -1,6 +1,6 @@
 body {
   margin: 0;
-  background-color: #333;
+  background-color: #444;
   color: #ccc;
   font-family: 'Helvetica', sans-serif;
 
@@ -80,10 +80,10 @@ body {
   }
 
   .card {
-    background-color: #313131;
+    background-color: #333;
     padding: 1rem;
     border-radius: 0.25rem;
-    border: 1px solid #444;
+    border: 1px solid #666;
     
     ul {
       list-style: none;
@@ -99,4 +99,11 @@ body {
 .loading-wrap {
   text-align: center;
   margin-top: 250px;
+}
+
+.button-bar {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  padding: 1rem;
 }

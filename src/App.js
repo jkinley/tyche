@@ -1,24 +1,37 @@
 import React from 'react';
-import NavBar from './components/navbar';
-import Planets from './components/planets';
+import { Switch, Route } from 'react-router-dom';
+import NavBar from './components/navbar/index.js';
+import Home from './pages/home';
 import People from './components/people';
+import Planets from './components/planets';
 
 function App() {
-  const [page, setPage] = React.useState('planets');
   return (
     <>
       <div className="App">
         <header className="header">
           <div className="container">
             <div className="logo">Star Wars Info</div>
-            <NavBar setPage={setPage} />
+            <NavBar />
           </div>
         </header>
+
         <main className="main">
           <div className="container">
-          { page === 'planets' ? <Planets /> : <People />}
+            <Switch>
+            <Route exact path="/">
+                <Home />
+              </Route>
+              <Route path="/people">
+                <People />
+              </Route>
+              <Route path="/planets">
+                <Planets />
+              </Route>
+            </Switch>
           </div>
         </main>
+
         <footer className="footer">
           <div>
             <small>Copyright &copy; {new Date().getFullYear()} Gizmo Creations. </small>

@@ -3,15 +3,11 @@ import { useQuery, useQueryClient } from 'react-query';
 import _ from 'lodash';
 import './index.scss';
 import Loader from 'react-loader-spinner';
-import Planet from './planet';
-
-const fetchPlanets = (pageNum) => fetch(`https://swapi.dev/api/planets/?page=${pageNum}`)
-  .then((res) => res.json());
-
-
+import Planet from './planet.js';
+import { fetchPlanets } from '../../api/index.js';
 
 const Planets = () => {
-  const [currentPage, setCurrentPage] = React.useState(2);
+  const [currentPage, setCurrentPage] = React.useState(1);
   const queryClient = useQueryClient();
   const {
     isLoading,
@@ -65,7 +61,6 @@ const ButtonBar = ({setCurrentPage, currentPage, maxPages }) => {
   console.log(maxPages)
   return (
     <div className="button-bar">
-
       <button
         className="btn"
         disabled={currentPage === 1}
@@ -73,7 +68,6 @@ const ButtonBar = ({setCurrentPage, currentPage, maxPages }) => {
       >
         Previous
       </button>
-
       <span>Page {currentPage}</span>
 
       <button

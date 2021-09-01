@@ -3,12 +3,9 @@ import { useQuery } from 'react-query';
 import _ from 'lodash';
 import './index.scss';
 import Loader from 'react-loader-spinner';
-import Person from './person';
+import Person from './person.js';
+import { fetchPeople } from '../../api/index.js';
 
-const fetchPeople = async () => {
-  const res = await fetch('https://swapi.dev/api/people/');
-  return res.json();
-};
 
 const People = () => {
   const {data, status} = useQuery('people', fetchPeople);

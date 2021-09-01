@@ -1,0 +1,19 @@
+.home-buttons {
+  display: grid;
+  grid-gap: 2rem;
+  grid-template-columns: 1fr;
+  @media (min-width: 768px) {
+    grid-template-columns: 1fr 1fr;
+  }
+
+
+  .btn {
+    width: 100%;
+    padding: 0.5rem 1rem;
+    background-color: #333;
+    border-radius: 0.25rem;
+    color: white;
+    outline: none;
+    border: 1px solid #555;
+  }
+}
