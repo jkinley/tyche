@@ -2,16 +2,11 @@ import React from 'react';
 import NavBar from './components/navbar';
 import Planets from './components/planets';
 import People from './components/people';
-import { QueryClient, QueryClientProvider } from 'react-query'
-import { ReactQueryDevtools } from 'react-query/devtools';
-
-const queryClient = new QueryClient()
 
 function App() {
   const [page, setPage] = React.useState('planets');
-
   return (
-    <QueryClientProvider client={queryClient}>
+    <>
       <div className="App">
         <header className="header">
           <div className="container">
@@ -30,8 +25,7 @@ function App() {
           </div>
         </footer>
       </div>
-      <ReactQueryDevtools initialIsOpen={false} />
-    </QueryClientProvider>
+    </>
   );
 }
 
