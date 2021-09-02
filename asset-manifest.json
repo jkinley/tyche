@@ -1,20 +1,20 @@
 {
   "files": {
-    "main.css": "/tyche/static/css/main.f938121a.chunk.css",
-    "main.js": "/tyche/static/js/main.dd47122e.chunk.js",
-    "main.js.map": "/tyche/static/js/main.dd47122e.chunk.js.map",
+    "main.css": "/tyche/static/css/main.b1519b45.chunk.css",
+    "main.js": "/tyche/static/js/main.085996d4.chunk.js",
+    "main.js.map": "/tyche/static/js/main.085996d4.chunk.js.map",
     "runtime-main.js": "/tyche/static/js/runtime-main.730adc8f.js",
     "runtime-main.js.map": "/tyche/static/js/runtime-main.730adc8f.js.map",
-    "static/js/2.3e0c6869.chunk.js": "/tyche/static/js/2.3e0c6869.chunk.js",
-    "static/js/2.3e0c6869.chunk.js.map": "/tyche/static/js/2.3e0c6869.chunk.js.map",
+    "static/js/2.a69d05a9.chunk.js": "/tyche/static/js/2.a69d05a9.chunk.js",
+    "static/js/2.a69d05a9.chunk.js.map": "/tyche/static/js/2.a69d05a9.chunk.js.map",
     "index.html": "/tyche/index.html",
-    "static/css/main.f938121a.chunk.css.map": "/tyche/static/css/main.f938121a.chunk.css.map",
-    "static/js/2.3e0c6869.chunk.js.LICENSE.txt": "/tyche/static/js/2.3e0c6869.chunk.js.LICENSE.txt"
+    "static/css/main.b1519b45.chunk.css.map": "/tyche/static/css/main.b1519b45.chunk.css.map",
+    "static/js/2.a69d05a9.chunk.js.LICENSE.txt": "/tyche/static/js/2.a69d05a9.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.730adc8f.js",
-    "static/js/2.3e0c6869.chunk.js",
-    "static/css/main.f938121a.chunk.css",
-    "static/js/main.dd47122e.chunk.js"
+    "static/js/2.a69d05a9.chunk.js",
+    "static/css/main.b1519b45.chunk.css",
+    "static/js/main.085996d4.chunk.js"
   ]
 }
