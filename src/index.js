@@ -16,6 +16,5 @@ ReactDOM.render(
       </Router>
       <ReactQueryDevtools initialIsOpen={false} />
     </QueryClientProvider>
-  </React.StrictMode>,
-  document.getElementById('root')
+  </React.StrictMode>, document.getElementById('root')
 );

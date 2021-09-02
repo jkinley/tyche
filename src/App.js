@@ -19,7 +19,7 @@ function App() {
         <main className="main">
           <div className="container">
             <Switch>
-            <Route exact path="/">
+              <Route exact path="/">
                 <Home />
               </Route>
               <Route path="/people">

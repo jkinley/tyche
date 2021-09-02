@@ -8,6 +8,15 @@ import { fetchPlanets } from '../../api/index.js';
 
 const Planets = () => {
   const [currentPage, setCurrentPage] = React.useState(1);
+  const [maxPages, setMaxPages] = React.useState(1);
+
+  // const test = {
+  //   "count": 0,
+  //   "next": "https://swapi.dev/api/planets/?page=2",
+  //   "previous": null,
+  //   "results": []
+  // }
+
   const queryClient = useQueryClient();
   const {
     isLoading,
@@ -21,44 +30,44 @@ const Planets = () => {
       { keepPreviousData: true, staleTime: 5000 }
     );
 
-  const count = data?.count;
-  const pageLength = data?.results.length;
-  const maxPages = count / pageLength;
-
   React.useEffect( () => {
-    if (currentPage < maxPages) {
-      const nextPage = currentPage + 1;
-      queryClient.prefetchQuery(['planets', nextPage], () => fetchPlanets(nextPage));
+    //const data = test;
+    if (data?.results.length > 0 && data?.count > 0 ) {
+      const temp = data?.count / data?.results.length;
+      setMaxPages(temp);
     }
-  }, [data, currentPage, queryClient, maxPages]);
+
+    
+  }, [data, maxPages]);
 
   return (  
     <>
       <h1>Planets</h1>
       { isLoading && <Loading />}
       { isError && <Error error={error}/> }
-      { status === 'success' && (
+      { status === 'success' && data?.count > 0 && (
         <div>
-          <ButtonBar currentPage={currentPage} setCurrentPage={setCurrentPage} />
-
+          <ButtonBar currentPage={currentPage} setCurrentPage={setCurrentPage} maxPages={maxPages} />
           <div className="content-grid">
-            {_.map(data.results, (planet) => {
+            {_.map(data?.results, (planet) => {
                 return (
                   <Planet key={planet.name} planet={planet} />
                 );
               })}
           </div>
-
-          <ButtonBar currentPage={currentPage} setCurrentPage={setCurrentPage} />
-        </div>
+          <ButtonBar currentPage={currentPage} setCurrentPage={setCurrentPage} maxPages={maxPages}/>
+        </div>)
+      }
+      { status === 'success' && data?.count === 0 && (
+        <h3>No data available</h3>
       )}
     </>
   );
 }
 
-const ButtonBar = ({setCurrentPage, currentPage, maxPages }) => {
+const ButtonBar = ({setCurrentPage, currentPage, maxPages, isFetching }) => {
 
-  console.log(maxPages)
+  console.log(maxPages);
   return (
     <div className="button-bar">
       <button
