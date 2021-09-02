@@ -1,5 +1,5 @@
 import React from 'react';
-import { useQuery, useQueryClient } from 'react-query';
+import { useQuery } from 'react-query';
 import _ from 'lodash';
 import './index.scss';
 import Loader from 'react-loader-spinner';
@@ -9,35 +9,23 @@ import { fetchPlanets } from '../../api/index.js';
 const Planets = () => {
   const [currentPage, setCurrentPage] = React.useState(1);
   const [maxPages, setMaxPages] = React.useState(1);
-
-  // const test = {
-  //   "count": 0,
-  //   "next": "https://swapi.dev/api/planets/?page=2",
-  //   "previous": null,
-  //   "results": []
-  // }
-
-  const queryClient = useQueryClient();
+  
   const {
     isLoading,
     isError,
+    isSuccess,
     error,
-    status,
-    data,
-    isFetching } = useQuery(
+    data } = useQuery(
       ['planets', currentPage], 
       () => fetchPlanets(currentPage), 
       { keepPreviousData: true, staleTime: 5000 }
     );
 
   React.useEffect( () => {
-    //const data = test;
     if (data?.results.length > 0 && data?.count > 0 ) {
       const temp = data?.count / data?.results.length;
       setMaxPages(temp);
     }
-
-    
   }, [data, maxPages]);
 
   return (  
@@ -45,20 +33,20 @@ const Planets = () => {
       <h1>Planets</h1>
       { isLoading && <Loading />}
       { isError && <Error error={error}/> }
-      { status === 'success' && data?.count > 0 && (
+      { isSuccess && data?.count > 0 && (
         <div>
           <ButtonBar currentPage={currentPage} setCurrentPage={setCurrentPage} maxPages={maxPages} />
           <div className="content-grid">
-            {_.map(data?.results, (planet) => {
+            {_.map(data?.results, (planet, i) => {
                 return (
-                  <Planet key={planet.name} planet={planet} />
+                  <Planet key={i} id={i + 1} planet={planet} />
                 );
               })}
           </div>
           <ButtonBar currentPage={currentPage} setCurrentPage={setCurrentPage} maxPages={maxPages}/>
         </div>)
       }
-      { status === 'success' && data?.count === 0 && (
+      { isSuccess && data?.count === 0 && (
         <h3>No data available</h3>
       )}
     </>

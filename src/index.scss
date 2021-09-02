@@ -1,6 +1,6 @@
 body {
   margin: 0;
-  background-color: #444;
+  background-color: #1e1e1e;
   color: #ccc;
   font-family: 'Helvetica', sans-serif;
 
@@ -22,6 +22,19 @@ body {
     margin-bottom: 1rem;
   }
 
+  a { 
+    color: firebrick;
+    text-decoration: none;
+  }
+
+  ul {
+    
+    margin-bottom: 1rem;
+    li + li {
+      margin-top: 0.5rem;
+    }
+  }
+
   .logo {
     font-size: 1.4rem;
   }
@@ -34,7 +47,7 @@ body {
     grid-template-rows: auto 1fr auto;
     
     .header {
-      background-color: #222;
+      background-color: #1a1a1a;
       padding: 1rem;
       .container {
         display: flex;
@@ -57,7 +70,7 @@ body {
     .footer {
       display: flex;
       justify-content: center;
-      background-color: #222;
+      background-color: #1a1a1a;
       color: #666;
       padding: 1rem;
     }

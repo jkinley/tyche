@@ -1,9 +1,10 @@
 import React from 'react';
 import { Switch, Route } from 'react-router-dom';
-import NavBar from './components/navbar/index.js';
+import NavBar from './components/navbar';
 import Home from './pages/home';
 import People from './components/people';
 import Planets from './components/planets';
+import PlanetDetail from './pages/planet-detail';
 
 function App() {
   return (
@@ -27,6 +28,9 @@ function App() {
               </Route>
               <Route path="/planets">
                 <Planets />
+              </Route>
+              <Route path="/planet-detail/:id">
+                <PlanetDetail />
               </Route>
             </Switch>
           </div>
