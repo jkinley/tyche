@@ -1,10 +1,10 @@
 import React from 'react';
-import { Switch, Route } from 'react-router-dom';
-import NavBar from './components/navbar';
+import { Switch, Route, Link } from 'react-router-dom';
 import Home from './pages/home';
-import People from './components/people';
-import Planets from './components/planets';
+import People from './pages/people';
+import Planets from './pages/planets';
 import PlanetDetail from './pages/planet-detail';
+import PeopleDetail from './pages/people-detail';
 
 function App() {
   return (
@@ -12,8 +12,9 @@ function App() {
       <div className="App">
         <header className="header">
           <div className="container">
-            <div className="logo">Star Wars Info</div>
-            <NavBar />
+            <Link className="btn" to='/'>
+              <div className="logo">Star Wars</div>
+            </Link>
           </div>
         </header>
 
@@ -26,10 +27,13 @@ function App() {
               <Route path="/people">
                 <People />
               </Route>
+              <Route path="/people-detail/:personId">
+                <PeopleDetail />
+              </Route>
               <Route path="/planets">
                 <Planets />
               </Route>
-              <Route path="/planet-detail/:id">
+              <Route path="/planet-detail/:planetId">
                 <PlanetDetail />
               </Route>
             </Switch>

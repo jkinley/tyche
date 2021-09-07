@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom';
 import { HashRouter as Router } from 'react-router-dom';
 import { QueryClient, QueryClientProvider } from 'react-query'
 import { ReactQueryDevtools } from 'react-query/devtools';
-import App from './App';
+import App from './app';
 import './index.scss';
 
 const queryClient = new QueryClient();
